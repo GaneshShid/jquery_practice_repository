@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        var cities=[];
+        $(document).ready(function()
+        {
+            $("#btn").click(function()
+            {
+                var c=$("#textct").val();
+                cities.push(c);
+                display();
+            })
+        })
+        function display()
+        {
+            $("#mydata").empty();
+            $.each(cities,function(i,d){
+                $("#mydata").append("<li id="+i+">"+d+"<input type='button' id='gs' onclick='remove("+i+")' value='x'></li>");
+                $("#gs").click(function remove(d){
+                    cities.splice(d,1); 
+                })
+                c=document.getElementById("textct").value=" "; 
+            })   
+        }
+        
+    </script>
+</head>
+<body>
+    city <input type="text" id="textct">
+    <input type="button" value="submit" id="btn">
+    
+    <h1 id="mydata"></h1>
+</body>
+</html>

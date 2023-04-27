@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script>
+         $(document).ready(function(){
+            $("#btn").click(function(){
+                var a=$("#txt1").val();
+                var b=$("#txt2").val();
+                var total=Number(a)+Number(b);
+                $("#total").html("total is: "+total);
+                var per=total/2;
+                $("#per").html("percentage are: "+Number(per));
+                if(per>=80 && per<=99)
+                {
+                    $("#grade").html("grade is excellent");
+                }
+                elseif:
+                {
+                    if(per>=70 && per<=79)
+                    $("#grade").html("grade is good");
+                }
+                elseif:
+                {
+                    if(per>=35 && per<=69)
+                    $("#grade").html("grade is avarage");
+                }
+                elseif:
+                {
+                    $("#grade").html("grade is fail");
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    num1 <input type="text" id="txt1" ><br>
+    num2 <input type="text" id="txt2" ><br>
+    <input type="button" value="submit" id="btn"><br>
+    <h1 id="total"></h1>
+    <h1 id="per"></h1>
+    <h1 id="grade"></h1>
+</body>
+</html>

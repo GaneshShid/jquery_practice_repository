@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click (function(){
+                $("#dv").animate({"left":"200px"})
+                $("#ganesh").html("welcome")
+                $("#dv").animate({"bottom":"600px"})
+                $("#dv").animate({"left":"00px"})
+                $("#dv").animate({"top":"30px"})
+            })
+        })     
+    </script>
+</head>
+<body>
+    <input type="button" value="display" id="btn">
+
+    <div id="dv" style="height:100px ; width: 100px; background-color: aqua; position: absolute;">
+        <h2 id="ganesh"></h2>
+    </div>
+
+</body>
+</html>

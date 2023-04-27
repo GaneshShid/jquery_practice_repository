@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#dv").hide();
+            })
+            $("#btn2").click(function(){
+                $("#dv").show();
+            })
+            $("#btn3").click(function(){
+                $("#dv").toggle();
+            })
+            $("#btn4").click(function(){
+                $("#dv").fadeOut();
+            })
+            $("#btn5").click(function(){
+                $("#dv").fadeIn();
+            })
+            $("#btn6").click(function(){
+                $("#dv").fadeToggle();
+            })
+            $("#btn7").click(function(){
+                $("#dv").slideUp();
+            })
+            $("#btn8").click(function(){
+                $("#dv").slideDown();
+            })
+            $("#btn9").click(function(){
+                $("#dv").slideToggle();
+            })
+           
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="hide" id="btn1">
+    <input type="button" value="show" id="btn2">
+    <input type="button" value="toggle" id="btn3">
+    <input type="button" value="fadeOut" id="btn4">
+    <input type="button" value="fadeIn" id="btn5">
+    <input type="button" value="fadeToggle" id="btn6">
+    <input type="button" value="slideUp" id="btn7">
+    <input type="button" value="slideDown" id="btn8">
+    <input type="button" value="slideToggle" id="btn9">
+    <div id="dv" style="height:100px ; width: 100px; background-color: aqua;">
+    </div>
+</body>
+</html>
